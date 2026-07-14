@@ -56,8 +56,12 @@ nav {
 }
 
 .nav-logo img {
-  height: 36px;
+  height: 44px;
   width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  /* compensa el padding blanco del PNG */
+  margin: -6px 0;
 }
 
 .nav-logo span {
@@ -70,7 +74,8 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 24px;
+  align-items: center;
 }
 
 .nav-links a {
@@ -100,8 +105,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   background: #25D366;
   border-radius: 50%;
   transition: transform var(--trans), box-shadow var(--trans);
@@ -114,8 +119,8 @@ nav {
 }
 
 .nav-whatsapp svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   fill: #fff;
 }
 
