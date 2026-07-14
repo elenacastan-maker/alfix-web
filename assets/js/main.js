@@ -1,5 +1,26 @@
 // AL-FIX — Scripts
 
+// Banner de cookies
+const cookieBanner = document.getElementById('cookieBanner');
+const cookieAccept = document.getElementById('cookieAccept');
+const cookieReject = document.getElementById('cookieReject');
+
+if (cookieBanner) {
+  if (localStorage.getItem('alfix_cookies')) {
+    cookieBanner.classList.add('hidden');
+  }
+  const hideBanner = () => {
+    cookieBanner.classList.add('hidden');
+    localStorage.setItem('alfix_cookies', 'accepted');
+  };
+  cookieAccept?.addEventListener('click', hideBanner);
+  cookieReject?.addEventListener('click', () => {
+    cookieBanner.classList.add('hidden');
+    localStorage.setItem('alfix_cookies', 'rejected');
+  });
+}
+
+
 // Menú mobile
 const toggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');

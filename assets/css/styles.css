@@ -490,6 +490,13 @@ section { padding: 88px 24px; }
 
 .resenas-cta a:hover { border-color: var(--azul); }
 
+.google-map-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  box-shadow: var(--sombra);
+}
+
 /* --- CONTACTO --- */
 #contacto { background: var(--gris-bg); }
 
@@ -612,6 +619,68 @@ section { padding: 88px 24px; }
 }
 
 .form-submit:hover { background: #1d95cc; transform: translateY(-1px); }
+
+/* --- BANNER COOKIES --- */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: var(--marino);
+  color: rgba(255,255,255,.85);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+  transform: translateY(0);
+  transition: transform .4s ease;
+}
+
+.cookie-banner.hidden { transform: translateY(110%); }
+
+.cookie-banner p {
+  font-size: .88rem;
+  line-height: 1.5;
+  max-width: 680px;
+  flex: 1;
+}
+
+.cookie-banner a { color: var(--azul); }
+
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+
+.cookie-accept {
+  background: var(--azul);
+  color: var(--blanco);
+  border: none;
+  border-radius: var(--radio);
+  padding: 9px 20px;
+  font-size: .9rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--trans);
+}
+
+.cookie-accept:hover { background: #1d95cc; }
+
+.cookie-reject {
+  background: transparent;
+  color: rgba(255,255,255,.65);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: var(--radio);
+  padding: 9px 16px;
+  font-size: .9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color var(--trans);
+}
+
+.cookie-reject:hover { border-color: rgba(255,255,255,.6); }
 
 /* --- FOOTER --- */
 footer {
