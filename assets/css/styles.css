@@ -310,9 +310,10 @@ section { padding: 88px 24px; }
 
 .sobre-grid {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: start;
+  max-width: 760px;
 }
 
 .sobre-texto p {
