@@ -298,6 +298,98 @@ section { padding: 88px 24px; }
   margin-bottom: 52px;
 }
 
+/* --- SOBRE NOSOTROS --- */
+#sobre-nosotros { background: var(--blanco); }
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: start;
+}
+
+.sobre-texto p {
+  color: var(--gris-tx);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.sobre-texto strong { color: var(--marino); }
+
+.sobre-puntos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-top: 28px;
+}
+
+.sobre-punto {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--marino);
+}
+
+.sobre-punto span {
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sobre-cta-wrap { position: sticky; top: 84px; }
+
+.sobre-cta-card {
+  background: var(--gris-bg);
+  border-radius: 16px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid #E2E6EA;
+}
+
+.sobre-cta-icon { font-size: 2rem; }
+
+.sobre-cta-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--marino);
+}
+
+.sobre-cta-card p {
+  font-size: .9rem;
+  color: var(--gris-tx);
+  line-height: 1.6;
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  border: 1.5px solid var(--marino);
+  border-radius: var(--radio);
+  color: var(--marino);
+  font-weight: 600;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: background var(--trans), color var(--trans);
+}
+
+.btn-outline-dark:hover {
+  background: var(--marino);
+  color: var(--blanco);
+}
+
+@media (max-width: 860px) {
+  .sobre-grid { grid-template-columns: 1fr; }
+  .sobre-cta-wrap { position: static; }
+  .sobre-puntos { grid-template-columns: 1fr; }
+}
+
 /* --- SERVICIOS --- */
 #servicios { background: var(--gris-bg); }
 
