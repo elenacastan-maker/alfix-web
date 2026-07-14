@@ -258,16 +258,87 @@ nav {
   align-items: center;
 }
 
-.hero-logo-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  background: rgba(255,255,255,.08);
+.hero-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.13);
   border-radius: 20px;
-  padding: 24px;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,.12);
+  padding: 28px 28px 24px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
+
+.hero-card-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card-logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 14px;
+}
+
+.hero-card-divider {
+  height: 1px;
+  background: rgba(255,255,255,.1);
+}
+
+.hero-card-servicios {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-card-servicios li {
+  font-size: .88rem;
+  color: rgba(255,255,255,.82);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hcs-icon { font-size: 1rem; flex-shrink: 0; }
+
+.hero-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-card-stars {
+  color: #F5C518;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero-card-rating span {
+  font-size: .82rem;
+  color: rgba(255,255,255,.6);
+  font-weight: 500;
+}
+
+.hero-card-tel {
+  display: block;
+  text-align: center;
+  background: var(--azul);
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: var(--radio);
+  text-decoration: none;
+  transition: background var(--trans), transform var(--trans);
+}
+
+.hero-card-tel:hover { background: #1d95cc; transform: translateY(-1px); }
 
 /* --- SECCIONES comunes --- */
 section { padding: 88px 24px; }
