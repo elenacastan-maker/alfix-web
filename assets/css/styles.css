@@ -376,6 +376,120 @@ section { padding: 88px 24px; }
   font-style: italic;
 }
 
+/* --- RESEÑAS --- */
+#resenas { background: var(--marino); }
+
+#resenas .section-tag {
+  background: rgba(41,171,226,.2);
+  color: var(--azul);
+}
+
+#resenas .section-title { color: var(--blanco); }
+#resenas .section-sub   { color: rgba(255,255,255,.65); }
+
+.resenas-stars-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.resenas-score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--blanco);
+  line-height: 1;
+}
+
+.resenas-meta { display: flex; flex-direction: column; gap: 4px; }
+
+.stars {
+  display: flex;
+  gap: 3px;
+  color: #F5C518;
+  font-size: 1.2rem;
+}
+
+.resenas-count { color: rgba(255,255,255,.55); font-size: .85rem; }
+
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.resena-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px;
+  padding: 28px;
+  transition: background var(--trans), transform var(--trans);
+}
+
+.resena-card:hover {
+  background: rgba(255,255,255,.1);
+  transform: translateY(-4px);
+}
+
+.resena-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.resena-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--blanco);
+  flex-shrink: 0;
+}
+
+.resena-info h4 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--blanco);
+  margin-bottom: 2px;
+}
+
+.resena-info span {
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
+}
+
+.resena-card .stars { margin-bottom: 12px; font-size: 1rem; }
+
+.resena-texto {
+  font-size: .92rem;
+  color: rgba(255,255,255,.75);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.resenas-cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.resenas-cta a {
+  color: var(--azul);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(41,171,226,.4);
+  transition: border-color var(--trans);
+}
+
+.resenas-cta a:hover { border-color: var(--azul); }
+
 /* --- CONTACTO --- */
 #contacto { background: var(--gris-bg); }
 
@@ -530,6 +644,8 @@ footer {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
+  .resenas-grid { grid-template-columns: 1fr; }
+
   .nav-links { display: none; flex-direction: column; }
   .nav-links.open {
     display: flex;
